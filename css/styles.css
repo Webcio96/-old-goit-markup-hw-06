@@ -839,3 +839,37 @@ a.mail-underline {
     height: 50px;
     outline: none;
 }
+
+.news-button {
+    width: 200px;
+    height: 50px;
+    background: var(--blue-font);
+    color: var(--white-font);
+    border-color: var(--blue-font);
+    border: 0;
+    border-radius: 4px;
+    position: absolute;
+    margin-left: 12px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+}
+
+.news-button p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
+    margin-left: 42px;
+    margin-right: 24px;
+}
+
+.news-button svg {
+    margin-right: 24px;
+}
+
+.news-button p::first-letter {
+    text-transform: uppercase;
+}
