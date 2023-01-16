@@ -17,6 +17,7 @@
     --popout-bg: rgba(33, 150, 243, 0.9);
     --shadow-modal: rgba(0, 0, 0, 0.2);
     --input-footer: #ffffff30;
+    --grey-border: #21212120;
 }
 
 ul,
@@ -242,6 +243,14 @@ body {
     top: 75px;
 }
 
+.form ::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
 .form label {
     display: flex;
     flex-direction: column;
@@ -253,9 +262,9 @@ body {
     width: 448px;
     height: 40px;
     border-radius: 4px;
-    border: solid 1px var(--logo-font);
-    outline: none;
+    border: solid 1px var(--grey-border);
     padding-left: 35px;
+    outline: none;
 }
 
 .form span {
@@ -295,9 +304,11 @@ body {
     resize: none;
     outline: none;
     border-radius: 4px;
+    border: solid 1px var(--grey-border);
+    padding-left: 16px;
 }
 
-.form textarea:is(:hover, :focus) {
+.form textarea:focus {
     border-color: var(--blue-font);
 
     transition-property: border-color;
@@ -306,18 +317,18 @@ body {
 }
 
 .form-icon {
-    transform: translateY(115%) translatex(40%);
+    transform: translateY(120%) translatex(40%);
     position: absolute;
 }
 
-.form input:is(:hover, :focus) {
+.form input:focus {
     border-color: var(--blue-font);
     transition-property: border-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form input:is(:hover, :focus) + svg {
+.form input:focus + svg {
     fill: var(--blue-font);
     transition-property: fill;
     transition-duration: 250ms;
@@ -838,6 +849,8 @@ a.mail-underline {
     width: 358px;
     height: 50px;
     outline: none;
+    padding-left: 16px;
+    color: var(--footer-contact-font);
 }
 
 .news-button {
@@ -872,4 +885,13 @@ a.mail-underline {
 
 .news-button p::first-letter {
     text-transform: uppercase;
+}
+
+.news-input::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--footer-contact-font);
 }
