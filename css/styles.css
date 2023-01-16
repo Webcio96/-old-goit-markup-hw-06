@@ -231,6 +231,114 @@ body {
     border: 1px solid black;
 }
 
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    top: 75px;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    max-width: 448px;
+    margin-bottom: 10px;
+}
+
+.form input {
+    width: 448px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px var(--logo-font);
+    outline: none;
+    padding-left: 35px;
+}
+
+.form span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    text-align: left;
+}
+
+.form button {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: var(--blue-font);
+    color: var(--white-font);
+    margin-left: 124px;
+    border-radius: 4px;
+    border-color: var(--blue-font);
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 4px var(--shadow-modal);
+}
+
+.form button > span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    text-align: center;
+}
+
+.form textarea {
+    resize: none;
+    outline: none;
+}
+
+.form textarea:is(:hover, :focus) {
+    border-color: var(--blue-font);
+}
+
+.form-icon {
+    transform: translateY(115%) translatex(40%);
+    position: absolute;
+}
+
+.form input:is(:hover, :focus) {
+    border-color: var(--blue-font);
+}
+
+.form input:is(:hover, :focus) + svg {
+    fill: var(--blue-font);
+}
+
+#checkbox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+#checkbox input {
+    max-width: 16px;
+    max-height: 15px;
+    margin-right: 8px;
+}
+
+#checkbox a {
+    color: var(--blue-font);
+}
+
+.form-header {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding-left: 28px;
+}
 /* end modal */
 
 .title-box {

@@ -576,6 +576,77 @@
         <div data-modal class="backdrop is-hidden">
             <div class="modal">
                 <button class="button-close" data-modal-close>&times;</button>
+                <h3 class="form-header">
+                    Zostaw swoje dane w formularzu poniżej
+                </h3>
+
+                <form name="signup_form" autocomplete="on" novalidate>
+                    <div class="form">
+                        <div>
+                            <label>
+                                <span>imie</span>
+                                <input
+                                    type="name"
+                                    name="name"
+                                    class="form-active"
+                                />
+                                <svg
+                                    width="20"
+                                    height="20"
+                                    class="form-icon form-active"
+                                >
+                                    <use href="./images/icons.svg#person"></use>
+                                </svg>
+                            </label>
+                        </div>
+
+                        <label>
+                            <span>telefon</span>
+                            <input type="tel" name="tel" class="form-active" />
+                            <svg
+                                width="20"
+                                height="20"
+                                class="form-icon form-active"
+                            >
+                                <use href="./images/icons.svg#phone"></use>
+                            </svg>
+                        </label>
+                        <label>
+                            <span>email</span>
+                            <input
+                                type="mail"
+                                name="mail"
+                                class="form-active"
+                            />
+                            <svg
+                                width="20"
+                                height="20"
+                                class="form-icon form-active"
+                            >
+                                <use href="./images/icons.svg#mail"></use>
+                            </svg>
+                        </label>
+                        <label>
+                            <span>komentarz</span>
+                            <textarea
+                                name="feedback"
+                                rows="7"
+                                placeholder="wprowadź tekst"
+                            ></textarea>
+                        </label>
+                        <label id="checkbox">
+                            <input type="checkbox" name="regulation" />
+                            <span>
+                                Oświadczam iż akceptuję
+                                <a href="#"> Regulamin</a> i
+                                <a href="#"> Politykę Prywatności.</a></span
+                            >
+                        </label>
+                        <div>
+                            <button type="submit"><span>Wyślij</span></button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
         <script src="./js/modal.js"></script>
