@@ -16,6 +16,7 @@
     --work-descbg: rgba(47, 48, 58, 0.8);
     --popout-bg: rgba(33, 150, 243, 0.9);
     --shadow-modal: rgba(0, 0, 0, 0.2);
+    --input-footer: #ffffff30;
 }
 
 ul,
@@ -264,6 +265,9 @@ body {
     letter-spacing: 0.01em;
     text-align: left;
 }
+.form span::first-letter {
+    text-transform: uppercase;
+}
 
 .form button {
     position: absolute;
@@ -290,10 +294,15 @@ body {
 .form textarea {
     resize: none;
     outline: none;
+    border-radius: 4px;
 }
 
 .form textarea:is(:hover, :focus) {
     border-color: var(--blue-font);
+
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
@@ -303,10 +312,30 @@ body {
 
 .form input:is(:hover, :focus) {
     border-color: var(--blue-font);
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form input:is(:hover, :focus) + svg {
     fill: var(--blue-font);
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.check {
+    position: absolute;
+    transform: translateY(0%) translatex(-1040%);
+    opacity: 0;
+    cursor: pointer;
+}
+
+#checkbox input[type='checkbox']:checked ~ .check {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #checkbox {
@@ -338,6 +367,9 @@ body {
     letter-spacing: 0.03em;
     text-align: center;
     padding-left: 28px;
+}
+.form-header::first-letter {
+    text-transform: uppercase;
 }
 /* end modal */
 
@@ -797,4 +829,13 @@ a.mail-underline {
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.news-input {
+    background: transparent;
+    border-color: var(--input-footer);
+    border-radius: 4px;
+    width: 358px;
+    height: 50px;
+    outline: none;
 }
