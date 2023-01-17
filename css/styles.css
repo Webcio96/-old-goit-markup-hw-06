@@ -343,11 +343,11 @@ body {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-    top: -2px;
+    top: -1px;
     left: -1px;
 }
 
-#checkbox input:checked + .box > .check {
+#checkbox input:checked + .box-check > .check {
     opacity: 1;
 }
 
@@ -367,11 +367,12 @@ body {
     display: none;
 }
 
-.box {
+.box-check {
     border: 2px solid var(--grey-font);
     width: 16px;
     height: 15px;
     margin-right: 8px;
+    border-radius: 2px;
 }
 
 #checkbox a {
