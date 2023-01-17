@@ -254,7 +254,7 @@ body {
 .form label {
     display: block;
     max-width: 448px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .form input {
@@ -265,6 +265,7 @@ body {
     border: solid 1px var(--grey-border);
     padding-left: 35px;
     outline: none;
+    margin-bottom: 10px;
 }
 
 .form span {
@@ -305,7 +306,7 @@ body {
     outline: none;
     border-radius: 4px;
     border: solid 1px var(--grey-border);
-    padding-left: 16px;
+    padding: 12px 16px;
     display: block;
     width: 100%;
 }
@@ -340,16 +341,14 @@ body {
 
 .check {
     position: absolute;
-    transform: translateY(0%) translatex(-1040%);
     opacity: 0;
     cursor: pointer;
+    top: -2px;
+    left: -1px;
 }
 
-#checkbox input[type='checkbox']:checked ~ .check {
+#checkbox input:checked + .box > .check {
     opacity: 1;
-    transition-property: opacity;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 #checkbox {
@@ -364,6 +363,14 @@ body {
 #checkbox input {
     max-width: 16px;
     max-height: 15px;
+    margin: 0 8px;
+    display: none;
+}
+
+.box {
+    border: 2px solid var(--grey-font);
+    width: 16px;
+    height: 15px;
     margin-right: 8px;
 }
 
@@ -373,14 +380,12 @@ body {
 
 .form-header {
     position: absolute;
-    top: 40px;
-    left: 40px;
     font-size: 20px;
     font-weight: 700;
     line-height: 23px;
     letter-spacing: 0.03em;
-    text-align: center;
     padding-left: 28px;
+    padding-right: 28px;
 }
 .form-header::first-letter {
     text-transform: uppercase;
