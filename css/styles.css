@@ -219,6 +219,7 @@ body {
     border-radius: 4px;
     transform: translateY(0);
     transition: transform 250ms ease-in-out;
+    padding: 40px;
 }
 
 .button-close {
@@ -234,13 +235,12 @@ body {
 }
 
 .form {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
     position: relative;
-    top: 75px;
+    display: block;
+    top: 30px;
+}
+.form div {
+    position: relative;
 }
 
 .form ::placeholder {
@@ -252,8 +252,7 @@ body {
 }
 
 .form label {
-    display: flex;
-    flex-direction: column;
+    display: block;
     max-width: 448px;
     margin-bottom: 10px;
 }
@@ -317,8 +316,9 @@ body {
 }
 
 .form-icon {
-    transform: translateY(120%) translatex(40%);
     position: absolute;
+    top: 10px;
+    left: 12px;
 }
 
 .form input:focus {
